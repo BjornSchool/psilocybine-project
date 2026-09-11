@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psilocybine — het traject van middel tot maatschappij</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #EEE8DA;
+    --paper-deep: #E2DAC7;
+    --ink: #2A2621;
+    --ink-soft: #55503F;
+    --spore: #4B3050;
+    --spore-deep: #35212F;
+    --thread: #B7A98A;
+    --amber: #9C6B2E;
+    --line: rgba(42,38,33,0.14);
+    --radius: 2px;
+    --measure: 66ch;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation: none !important; transition: none !important; }
+  }
+
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, .display{
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  a{ color: var(--spore); }
+
+  .wrap{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(238,232,218,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height: 64px;
+  }
+  .brand{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size: 1.05rem;
+    color: var(--spore-deep);
+    text-decoration:none;
+  }
+  .navlinks{
+    display:flex;
+    gap: 22px;
+    list-style:none;
+    margin:0; padding:0;
+  }
+  .navlinks a{
+    color: var(--ink-soft);
+    text-decoration:none;
+    font-size: 0.92rem;
+  }
+  .navlinks a:hover{ color: var(--spore); }
+  .navtoggle{
+    display:none;
+    background:none; border:none; cursor:pointer;
+    font-family:'IBM Plex Sans'; font-size:0.9rem;
+    color: var(--ink);
+  }
+  @media (max-width: 780px){
+    .navlinks{
+      display:none;
+      position:absolute; top:64px; left:0; right:0;
+      background: var(--paper);
+      flex-direction:column;
+      padding: 16px 32px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .navlinks.open{ display:flex; }
+    .navtoggle{ display:block; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding: 96px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;
+    color: var(--amber);
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.05;
+    max-width: 14ch;
+    margin: 0 0 28px;
+  }
+  .hero h1 em{
+    font-style: italic;
+    color: var(--spore);
+  }
+  .hero p.lede{
+    max-width: var(--measure);
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+  .hero-meta{
+    margin-top: 40px;
+    display:flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    max-width: 640px;
+  }
+  .hero-meta div{ font-size: 0.85rem; color: var(--ink-soft); }
+  .hero-meta strong{
+    display:block;
+    font-family:'Fraunces', serif;
+    color: var(--ink);
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .mycelium{
+    position:absolute;
+    right:-60px; top:0; bottom:0;
+    width: 420px;
+    opacity: 0.35;
+    pointer-events:none;
+  }
+  @media (max-width: 900px){ .mycelium{ display:none; } }
+
+  /* ---------- INTRO ---------- */
+  .intro{
+    padding: 8px 0 64px;
+    border-bottom: 1px solid var(--line);
+  }
+  .intro p{
+    max-width: var(--measure);
+    color: var(--ink-soft);
+  }
+  .intro .placeholder{
+    background: rgba(75,48,80,0.06);
+    border-left: 3px solid var(--spore);
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    color: var(--spore-deep);
+    max-width: var(--measure);
+  }
+
+  /* ---------- JOURNEY / STAGES ---------- */
+  .journey{
+    position: relative;
+    padding: 40px 0 20px;
+  }
+  .journey-intro{
+    padding-bottom: 40px;
+  }
+  .journey-intro h2{
+    font-size: 1.9rem;
+    margin: 0 0 12px;
+  }
+
+  .stage{
+    position: relative;
+    padding: 56px 0 56px 56px;
+    border-left: 1px solid var(--thread);
+    margin-left: 6px;
+  }
+  .stage:last-child{ border-left: 1px solid transparent; }
+  .stage::before{
+    content: attr(data-index);
+    position:absolute;
+    left: -19px;
+    top: 58px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--thread);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--spore-deep);
+  }
+  .stage.alt{ background: var(--paper-deep); }
+  .stage-head{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .stage-head h3{
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .stage-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    text-transform: lowercase;
+  }
+  .stage p{
+    max-width: var(--measure);
+    color: var(--ink-soft);
+  }
+  .stage .todo{
+    margin-top: 16px;
+    font-size: 0.88rem;
+    color: var(--spore);
+  }
+  .stage .todo::before{ content: "→ "; }
+
+  /* ---------- PRAKTIJKONDERZOEK ---------- */
+  .research{
+    padding: 72px 0;
+    border-top: 1px solid var(--line);
+  }
+  .research h2{ font-size: 1.9rem; margin: 0 0 8px; }
+  .research > .wrap > p{ color: var(--ink-soft); max-width: var(--measure); margin-bottom: 40px; }
+  .research-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  @media (max-width: 720px){ .research-grid{ grid-template-columns: 1fr; } }
+  .research-card{
+    border: 1px solid var(--line);
+    padding: 26px 24px;
+    background: var(--paper-deep);
+  }
+  .research-card .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--amber);
+    display:block;
+    margin-bottom: 10px;
+  }
+  .research-card h3{ font-size: 1.15rem; margin: 0 0 10px; }
+  .research-card p{ color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* ---------- DOELGROEP ---------- */
+  .audience{
+    padding: 64px 0;
+    background: var(--spore-deep);
+    color: #EFE6E2;
+  }
+  .audience h2{ color: #fff; font-size: 1.7rem; margin: 0 0 14px; }
+  .audience p{ max-width: var(--measure); color: #D9C9D4; }
+
+  /* ---------- BRONNEN ---------- */
+  .sources{
+    padding: 72px 0;
+    border-top: 1px solid var(--line);
+  }
+  .sources h2{ font-size: 1.9rem; margin: 0 0 24px; }
+  .sources ol{
+    padding-left: 20px;
+    max-width: var(--measure);
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+  .sources li{ margin-bottom: 10px; }
+
+  footer{
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--line);
+  }
+  footer p{
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#top">Psilocybine — het traject</a>
+    <button class="navtoggle" aria-label="Menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">Menu</button>
+    <ul class="navlinks">
+      <li><a href="#traject">Het traject</a></li>
+      <li><a href="#praktijkonderzoek">Praktijkonderzoek</a></li>
+      <li><a href="#doelgroep">Doelgroep</a></li>
+      <li><a href="#bronnen">Bronnen</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Minor TOXIC — adaptieve opdracht</div>
+    <h1>Van paddenstoel tot <em>protocol</em>: de reis van psilocybine</h1>
+    <p class="lede">[Placeholder introductietekst] Deze website volgt psilocybine van werkzame stof tot medisch middel: hoe het werkt, hoe het ontwikkeld en op de markt gebracht is, wat er gebeurt als het middel eenmaal in gebruik is, en welke sporen het achterlaat — in het lichaam en in het milieu.</p>
+    <div class="hero-meta">
+      <div><strong>Onderwerp</strong>Psilocybine</div>
+      <div><strong>Vorm</strong>Website</div>
+      <div><strong>Auteurs</strong>[Naam 1] &amp; [Naam 2]</div>
+      <div><strong>Doelgroep</strong>[in te vullen]</div>
+    </div>
+  </div>
+  <svg class="mycelium" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#4B3050" stroke-width="1.4">
+      <path d="M380 0 C 340 80, 360 140, 300 190 S 260 260, 300 320 S 220 380, 240 460 S 180 520, 200 600"/>
+      <path d="M300 190 C 260 200, 230 210, 210 250"/>
+      <path d="M300 320 C 340 330, 360 350, 380 400"/>
+      <path d="M240 460 C 200 470, 170 480, 150 520"/>
+    </g>
+  </svg>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <p>[Placeholder] Korte uitleg van wat psilocybine is, waar het voor gebruikt wordt (bijv. onderzoek naar depressie, PTSS, verslaving) en waarom dit onderwerp relevant is. Vervang deze alinea door jullie eigen tekst.</p>
+    <div class="placeholder">Let op: dit is een skelet. Alle tekst met [haakjes] is placeholder-tekst — vervang die door jullie eigen onderzoek, en pas gerust secties, volgorde of kleuren aan.</div>
+  </div>
+</section>
+
+<section class="journey" id="traject">
+  <div class="wrap journey-intro">
+    <h2>Het traject</h2>
+    <p style="max-width:var(--measure); color:var(--ink-soft);">Vijf stadia die samen de reis van het middel vormen. De nadruk hoeft niet gelijk verdeeld te zijn — sommige stadia mogen dieper uitgewerkt worden dan andere.</p>
+  </div>
+
+  <div class="stage" data-index="1">
+    <div class="wrap">
+      <div class="stage-head">
+        <h3>Ontwikkeling</h3>
+        <span class="stage-tag">werking · onderzoeksgeschiedenis</span>
+      </div>
+      <p>[Placeholder] Hoe is psilocybine ontdekt en ontwikkeld als potentieel geneesmiddel? Welk onderzoek ging vooraf aan klinische toepassing, en hoe werkt de stof in het lichaam/brein?</p>
+      <div class="todo">Vul aan met wetenschappelijke bronnen over farmacologie en ontwikkelingsgeschiedenis.</div>
+    </div>
+  </div>
+
+  <div class="stage alt" data-index="2">
+    <div class="wrap">
+      <div class="stage-head">
+        <h3>Entree op de markt</h3>
+        <span class="stage-tag">regelgeving · toelating</span>
+      </div>
+      <p>[Placeholder] Hoe verloopt (of verliep) de weg naar goedkeuring en toelating tot de markt? Welke regelgevende instanties zijn hierbij betrokken en welke hobbels kwamen jullie tegen?</p>
+      <div class="todo">Vul aan met info over toelatingsprocedures en eventuele juridische status.</div>
+    </div>
+  </div>
+
+  <div class="stage" data-index="3">
+    <div class="wrap">
+      <div class="stage-head">
+        <h3>Farmacovigilantie</h3>
+        <span class="stage-tag">bijwerkingen · monitoring</span>
+      </div>
+      <p>[Placeholder] Hoe wordt de veiligheid van het middel na introductie in de gaten gehouden? Welke bijwerkingen of risico's zijn bekend, en hoe worden die gemeld en opgevolgd?</p>
+      <div class="todo">Vul aan met meldsystemen, bekende bijwerkingen, en eventuele casus.</div>
+    </div>
+  </div>
+
+  <div class="stage alt" data-index="4">
+    <div class="wrap">
+      <div class="stage-head">
+        <h3>Milieu-impact</h3>
+        <span class="stage-tag">productie · afvalketen</span>
+      </div>
+      <p>[Placeholder] Wat is de milieu-impact van productie, gebruik en afvoer van het middel? Denk aan kweek/synthese, verpakking, en wat er gebeurt met resten in het afvalwater.</p>
+      <div class="todo">Vul aan met milieudata of vergelijkingen met andere geneesmiddelen.</div>
+    </div>
+  </div>
+
+  <div class="stage" data-index="5">
+    <div class="wrap">
+      <div class="stage-head">
+        <h3>Toxicologie</h3>
+        <span class="stage-tag">dosering · risico</span>
+      </div>
+      <p>[Placeholder] Wat is er bekend over toxiciteit, veilige doseringen, en risico's bij verkeerd gebruik of interacties met andere middelen?</p>
+      <div class="todo">Vul aan met toxicologische data en eventueel vergelijkende risicoanalyse.</div>
+    </div>
+  </div>
+</section>
+
+<section class="research" id="praktijkonderzoek">
+  <div class="wrap">
+    <h2>Praktijkonderzoek</h2>
+    <p>De opdracht vraagt minstens twee praktijkonderzoeken. Onderstaand alvast een plek om die te plannen en later uit te werken.</p>
+    <div class="research-grid">
+      <div class="research-card">
+        <span class="num">01</span>
+        <h3>[Titel praktijkonderzoek 1]</h3>
+        <p>[Placeholder] Bijvoorbeeld: interview met een onderzoeker, behandelaar of ervaringsdeskundige. Beschrijf hier wie, wanneer, en wat de belangrijkste inzichten waren.</p>
+      </div>
+      <div class="research-card">
+        <span class="num">02</span>
+        <h3>[Titel praktijkonderzoek 2]</h3>
+        <p>[Placeholder] Bijvoorbeeld: meelopen bij een instituut of kliniek. Beschrijf hier wat je hebt waargenomen en welke conclusies je eraan verbindt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="audience" id="doelgroep">
+  <div class="wrap">
+    <h2>Voor wie is deze website</h2>
+    <p>[Placeholder] Beschrijf hier de gekozen doelgroep (bijv. zorgprofessionals, medestudenten, patiënten) en waarom deze vorm en toon daarbij past.</p>
+  </div>
+</section>
+
+<section class="sources" id="bronnen">
+  <div class="wrap">
+    <h2>Bronnen</h2>
+    <ol>
+      <li>[Wetenschappelijke bron 1 — auteur, titel, jaar]</li>
+      <li>[Wetenschappelijke bron 2 — auteur, titel, jaar]</li>
+      <li>[Niet-wetenschappelijke bron 1 — bijv. nieuwsartikel]</li>
+      <li>[Niet-wetenschappelijke bron 2 — bijv. documentaire/podcast]</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Minor TOXIC · Adaptieve opdracht · [Naam 1] &amp; [Naam 2] · laatst bijgewerkt: [datum]</p>
+  </div>
+</footer>
+
+</body>
+</html>
