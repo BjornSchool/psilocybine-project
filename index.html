@@ -278,6 +278,13 @@
     color: var(--spore);
   }
   .stage .todo::before{ content: "→ "; }
+  .stage ol.steps{
+    max-width: var(--measure);
+    padding-left: 20px;
+    color: var(--ink-soft);
+  }
+  .stage ol.steps li{ margin-bottom: 12px; }
+  .stage ol.steps strong{ color: var(--ink); font-weight: 600; }
 
   /* ---------- PRAKTIJKONDERZOEK ---------- */
   .research{
@@ -400,10 +407,17 @@
     <div class="wrap">
       <div class="stage-head">
         <h3>Hoe werkt psilocybine</h3>
-        <span class="stage-tag">werking · onderzoeksgeschiedenis</span>
+        <span class="stage-tag">werking · receptoren · hersenen</span>
       </div>
-      <p>[Placeholder] Hoe is psilocybine ontdekt en ontwikkeld als potentieel geneesmiddel? Welk onderzoek ging vooraf aan klinische toepassing, en hoe werkt de stof in het lichaam/brein?</p>
-      <div class="todo">Vul aan met wetenschappelijke bronnen over farmacologie en ontwikkelingsgeschiedenis.</div>
+      <p>Psilocybine zelf is eigenlijk nog niet de stof die werkt. Het is een zogeheten prodrug: het lichaam zet het om in psilocine, en die stof veroorzaakt de effecten. Dat gaat in vier stappen.</p>
+      <ol class="steps">
+        <li><strong>Omzetting.</strong> Na inname haalt het enzym alkalische fosfatase de fosfaatgroep van psilocybine af. Wat overblijft is psilocine. Die stof lost beter op in vet en kan daardoor de bloed-hersenbarrière over.</li>
+        <li><strong>Binding aan serotoninereceptoren.</strong> Psilocine lijkt qua bouw op serotonine, een signaalstof in de hersenen. Het bindt vooral aan de 5-HT2A-receptor en werkt daar als gedeeltelijke agonist: het activeert de receptor, maar minder sterk dan serotonine zelf. In mindere mate bindt het ook aan andere serotoninereceptoren, zoals 5-HT1A en 5-HT2C. De 5-HT2A-receptor zit veel op zenuwcellen in de hersenschors, het deel van de hersenen voor waarneming, denken en gevoel.</li>
+        <li><strong>Veranderde samenwerking tussen hersengebieden.</strong> Scans (fMRI) laten zien dat het default mode network, het netwerk dat actief is bij piekeren en bij het beeld dat je van jezelf hebt, minder synchroon werkt. Tegelijk praten andere hersengebieden juist meer met elkaar. Dit wordt in verband gebracht met een veranderde waarneming en het gevoel dat de grens tussen jezelf en de omgeving vervaagt.</li>
+        <li><strong>Plasticiteit.</strong> Dierstudies wijzen erop dat psychedelica de groei van nieuwe verbindingen tussen zenuwcellen stimuleren. Dat zou kunnen verklaren waarom effecten langer aanhouden dan de stof in het lichaam aanwezig is. Dit onderzoek is nog in volle gang.</li>
+      </ol>
+      <p>Na inname via de mond begint het effect meestal na ongeveer een half uur tot een uur, met een piek na ongeveer twee tot drie uur. In totaal duurt het ongeveer vier tot zes uur. Psilocine wordt in de lever afgebroken, onder andere door het te koppelen aan glucuronzuur, en daarna uitgescheiden. Hoe de werking op receptorniveau precies leidt tot de effecten bij bijvoorbeeld depressie, is nog onderwerp van onderzoek.</p>
+      <div class="todo">Controleer en onderbouw deze tekst met eigen bronnen, bijvoorbeeld Vollenweider &amp; Preller (2020, Nature Reviews Neuroscience), Carhart-Harris et al. (2012, PNAS) en Ly et al. (2018, Cell Reports).</div>
     </div>
   </div>
 
