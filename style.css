@@ -736,3 +736,17 @@
 .mollegend i:first-child{ margin-left:0; }
 .molnote{ font-size: 0.8rem; }
 .molfig:not(.has-3d) .molstage, .molfig:not(.has-3d) .molopts, .molfig:not(.has-3d) .mollegend{ display:none; }
+
+/* ---------- 3D GEDROOGDE PADDENSTOELEN ---------- */
+.paddofig{ margin: 28px 0 8px; max-width: 760px; }
+.paddostage{
+  position: relative; width: 100%; height: 420px;
+  border: 1px solid var(--line);
+  background: radial-gradient(ellipse at 50% 35%, #E9E9EB 0%, #C9C9CC 100%);
+  cursor: grab; touch-action: pan-y; overflow: hidden;
+}
+.paddostage:active{ cursor: grabbing; }
+.paddostage canvas{ display:block; width:100%; height:100%; }
+@media (max-width: 720px){ .paddostage{ height: 360px; } }
+.paddofig figcaption{ margin-top: 10px; font-size: 0.8rem; color: var(--ink-soft); }
+.paddofig:not(.has-3d) .paddostage{ display:none; }
