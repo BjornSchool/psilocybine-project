@@ -750,3 +750,13 @@
 @media (max-width: 720px){ .paddostage{ height: 360px; } }
 .paddofig figcaption{ margin-top: 10px; font-size: 0.8rem; color: var(--ink-soft); }
 .paddofig:not(.has-3d) .paddostage{ display:none; }
+
+/* ---------- INTERVIEW SMARTSHOP ---------- */
+#interview .shotgrid{
+  display:grid; grid-template-columns: minmax(0,1.6fr) minmax(0,1fr);
+  gap: 24px; align-items:start; margin-top: 32px; max-width: 900px;
+}
+@media (max-width: 720px){ #interview .shotgrid{ grid-template-columns: 1fr; } }
+#interview .shot{ margin:0; }
+#interview .shot img{ display:block; width:100%; height:auto; border: 1px solid var(--line); background: var(--paper-deep); }
+#interview .shot figcaption{ margin-top: 8px; font-size: 0.8rem; color: var(--ink-soft); }
