@@ -761,3 +761,9 @@
 #interview .shot{ margin:0; }
 #interview .shot img{ display:block; width:100%; height:auto; border: 1px solid var(--line); background: var(--paper-deep); }
 #interview .shot figcaption{ margin-top: 8px; font-size: 0.8rem; color: var(--ink-soft); }
+
+/* ---------- INTERVIEW EXPERT ---------- */
+#expert .leadin{ max-width: var(--measure); color: var(--ink); font-size: 1.05rem; }
+#expert h3{ font-size: 1.2rem; margin: 30px 0 8px; }
+#expert .wrap > p{ max-width: var(--measure); color: var(--ink-soft); }
+#expert .byline{ margin-top: 28px; font-size: 0.88rem; }
