@@ -711,29 +711,28 @@
 
 
 /* ---------- MOLECUUL-VIEWER ---------- */
-.molfig{ margin: 32px 0 8px; max-width: 760px; }
-.moltabs{ display:flex; gap:0; margin-bottom: 0; }
-.moltabs button{
-  font: inherit; font-size: 0.92rem; cursor: pointer;
-  padding: 10px 20px; border: 1px solid var(--line); border-bottom: none;
-  background: transparent; color: var(--ink-soft);
-}
-.moltabs button + button{ border-left: none; }
-.moltabs button[aria-pressed="true"]{ background: var(--paper-deep); color: var(--spore-deep); font-weight: 600; }
+.molfig{ margin: 32px 0 8px; max-width: 900px; }
 .molstage{
-  position: relative; width: 100%; height: 440px;
+  position: relative; width: 100%; height: 420px;
   border: 1px solid var(--line);
   background: radial-gradient(ellipse at 50% 40%, #F7F2E6 0%, var(--paper-deep) 100%);
-  cursor: grab; touch-action: pan-y;
+  cursor: grab; touch-action: pan-y; overflow: hidden;
 }
 .molstage:active{ cursor: grabbing; }
 .molstage canvas{ display:block; width:100%; height:100%; }
-@media (max-width: 720px){ .molstage{ height: 340px; } }
-.molopts{ display:flex; flex-wrap:wrap; gap: 8px 22px; margin-top: 12px; font-size: 0.88rem; color: var(--ink-soft); }
+@media (max-width: 720px){ .molstage{ height: 600px; } }
+.mollabel{ position:absolute; pointer-events:none; line-height:1.25; }
+.mollabel strong{ display:block; font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:1.15rem; color: var(--ink); }
+.mollabel span{ font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color: var(--ink-soft); }
+.molopts{ display:flex; flex-wrap:wrap; align-items:center; gap: 8px 22px; margin-top: 12px; font-size: 0.88rem; color: var(--ink-soft); }
 .molopts label{ display:flex; align-items:center; gap:6px; cursor:pointer; }
+.molopts button{
+  font: inherit; font-size: 0.85rem; cursor:pointer; color: var(--spore-deep);
+  background: transparent; border: 1px solid var(--thread); padding: 5px 12px;
+}
+.molopts button:hover{ background: var(--paper-deep); }
 .molfig figcaption{ margin-top: 12px; font-size: 0.85rem; color: var(--ink-soft); display:grid; gap:6px; }
-.molfig figcaption strong{ font-family:'IBM Plex Mono', monospace; font-weight:500; color: var(--spore-deep); }
 .mollegend i{ display:inline-block; width:10px; height:10px; border-radius:50%; margin: 0 4px 0 12px; vertical-align: baseline; }
 .mollegend i:first-child{ margin-left:0; }
 .molnote{ font-size: 0.8rem; }
-.molfig:not(.has-3d) .molstage, .molfig:not(.has-3d) .moltabs, .molfig:not(.has-3d) .molopts, .molfig:not(.has-3d) .mollegend{ display:none; }
+.molfig:not(.has-3d) .molstage, .molfig:not(.has-3d) .molopts, .molfig:not(.has-3d) .mollegend{ display:none; }
