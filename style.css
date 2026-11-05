@@ -783,5 +783,9 @@
 #farmacovigilantie .sev-mild{ border-left-color: #b9a05a; }
 #farmacovigilantie .sev-matig{ border-left-color: #b5702e; }
 #farmacovigilantie .sev-zwaar{ border-left-color: #8a2b2b; }
-#farmacovigilantie .srcs{ max-width: var(--measure); padding-left: 20px; color: var(--ink-soft); font-size: 0.95rem; }
-#farmacovigilantie .srcs li{ margin-bottom: 8px; }
+
+/* ---------- LITERATUURLIJST ---------- */
+.srcnote{ margin-top: 18px; font-size: 0.9rem; }
+#literatuur h3{ font-size: 1.2rem; margin: 30px 0 8px; scroll-margin-top: 84px; }
+#literatuur .srcs{ max-width: var(--measure); padding-left: 20px; color: var(--ink-soft); font-size: 0.95rem; }
+#literatuur .srcs li{ margin-bottom: 8px; overflow-wrap: anywhere; }
