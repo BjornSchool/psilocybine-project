@@ -794,3 +794,4 @@
 /* ---------- WEL WETEN: tekst in kaart ---------- */
 .hcard.know > p{ margin: 0 0 12px; }
 .hcard .cardsub{ margin: 18px 0 6px; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size: 0.74rem; letter-spacing: 0.02em; color: var(--amber); text-transform: lowercase; }
+.hcard.unknown > p{ margin: 12px 0 0; }
