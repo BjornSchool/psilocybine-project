@@ -783,3 +783,5 @@
 #farmacovigilantie .sev-mild{ border-left-color: #b9a05a; }
 #farmacovigilantie .sev-matig{ border-left-color: #b5702e; }
 #farmacovigilantie .sev-zwaar{ border-left-color: #8a2b2b; }
+#farmacovigilantie .srcs{ max-width: var(--measure); padding-left: 20px; color: var(--ink-soft); font-size: 0.95rem; }
+#farmacovigilantie .srcs li{ margin-bottom: 8px; }
