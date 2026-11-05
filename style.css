@@ -798,7 +798,7 @@
 
 /* ---------- INTERVIEW: tekst met foto's ernaast ---------- */
 #interview .ivlayout{
-  display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+  display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
   gap: 56px; align-items:start; max-width: 1080px;
 }
 #interview .ivtext p{ max-width: var(--measure); color: var(--ink-soft); }
