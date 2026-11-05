@@ -853,6 +853,10 @@ body .vp-wrap{ height:calc(100vh - 64px); height:calc(100dvh - 64px); min-height
 .vp-wrap .ch-in{ max-width:1100px; }
 .vp-wrap .ch-in > p,.vp-wrap .ch-in > ul,.vp-wrap .ch-in > ol,.vp-wrap .ch-in > details,.vp-wrap .ch-in > h3,.vp-wrap .ch-in > h4,.vp-wrap .ch-in > .note{ max-width:var(--measure); }
 .vp-wrap .ch-tag{ display:inline-block; }
+/* hele inhoud gecentreerd op het scherm */
+.vp-wrap .content{ max-width:1292px; margin:0 auto; }
+@media (min-width:1000px){ .vp-wrap .ch{ padding-right:96px; } }
+.vp-wrap .chnav{ justify-content:center; }
 /* foto's rechts, zoals op de homepage */
 .vp-wrap .ch-in > figure.photo,.vp-wrap .ch-in > .photos2,.vp-wrap .home-sec .side{ float:right; clear:right; width:380px; max-width:380px; margin:4px 0 22px 44px; }
 .vp-wrap .ch-in > figure.photo.narrow,.vp-wrap .ch-in > figure.photo.flyer{ width:300px; }
