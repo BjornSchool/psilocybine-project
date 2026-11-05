@@ -768,3 +768,18 @@
 #expert .wrap > p{ max-width: var(--measure); color: var(--ink-soft); }
 #expert .byline{ margin-top: 28px; font-size: 0.88rem; }
 #expert .expertnote{ font-size: 0.92rem; font-style: italic; }
+
+/* ---------- FARMACOVIGILANTIE ---------- */
+#farmacovigilantie .wrap > p{ max-width: var(--measure); color: var(--ink-soft); }
+#farmacovigilantie h3{ font-size: 1.2rem; margin: 30px 0 8px; }
+#farmacovigilantie .sevgrid{
+  display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px;
+  margin: 16px 0 18px; max-width: 900px;
+}
+@media (max-width: 720px){ #farmacovigilantie .sevgrid{ grid-template-columns: 1fr; } }
+#farmacovigilantie .sev{ border: 1px solid var(--line); border-left-width: 4px; background: rgba(255,255,255,0.4); padding: 14px 16px 6px; }
+#farmacovigilantie .sev h4{ margin: 0 0 6px; font-family:'Fraunces', Georgia, serif; font-weight:500; font-size: 1.05rem; color: var(--ink); }
+#farmacovigilantie .sev p{ margin: 0 0 10px; font-size: 0.92rem; color: var(--ink-soft); }
+#farmacovigilantie .sev-mild{ border-left-color: #b9a05a; }
+#farmacovigilantie .sev-matig{ border-left-color: #b5702e; }
+#farmacovigilantie .sev-zwaar{ border-left-color: #8a2b2b; }
