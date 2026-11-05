@@ -795,3 +795,17 @@
 .hcard.know > p{ margin: 0 0 12px; }
 .hcard .cardsub{ margin: 18px 0 6px; font-family:'IBM Plex Mono', monospace; font-weight:500; font-size: 0.74rem; letter-spacing: 0.02em; color: var(--amber); text-transform: lowercase; }
 .hcard.unknown > p{ margin: 12px 0 0; }
+
+/* ---------- INTERVIEW: tekst met foto's ernaast ---------- */
+#interview .ivlayout{
+  display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+  gap: 56px; align-items:start; max-width: 1080px;
+}
+#interview .ivtext p{ max-width: var(--measure); color: var(--ink-soft); }
+#interview .ivmedia{ display:grid; gap: 28px; position: sticky; top: 92px; }
+#interview .ivmedia .shot img{ box-shadow: 0 1px 2px rgba(42,38,33,0.08), 0 8px 24px rgba(42,38,33,0.08); }
+#interview .shot-solo{ grid-template-columns: minmax(0, 1fr); max-width: 680px; margin-top: 44px; }
+@media (max-width: 900px){
+  #interview .ivlayout{ grid-template-columns: 1fr; gap: 32px; }
+  #interview .ivmedia{ position: static; max-width: 480px; }
+}
