@@ -906,7 +906,9 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
 .vp-wrap .facts[data-n="5"] > :nth-child(n+4){ grid-column:span 3; }
 .vp-wrap .facts[data-n="7"] > :nth-child(7){ grid-column:1 / -1; }
 @media (max-width:620px){ .vp-wrap .facts > *,.vp-wrap .facts[data-n] > *{ grid-column:1 / -1 !important; } }
-.vp-wrap .ethics{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+.vp-wrap .ethics{ grid-template-columns:repeat(3,minmax(0,1fr)); max-width:none; }
+.vp-wrap .ch-in > details.deep.deep-wide{ max-width:none; }
+@media (max-width:860px){ .vp-wrap .ethics{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
 .vp-wrap .hgrid{ display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); max-width:none; gap:16px; }
 .vp-wrap .hgrid > *{ grid-column:span 2; }
 .vp-wrap .hgrid[data-n="1"] > *{ grid-column:1 / -1; }
@@ -1023,7 +1025,7 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
       <div class="claim">
         <p class="say">“Binnenkort overal beschikbaar.”</p>
         <p class="fact-c">Nee, nog niet. In oktober 2026 is psilocybine nergens ter wereld goedgekeurd als medicijn. In Europa is de vergoeding de grootste horde: een medicijn wordt pas betaald als is beoordeeld of het zijn geld waard is (de HTA-beoordeling), en in Oregon kosten begeleide sessies vaak ruim 1.000 dollar en worden ze niet vergoed.<a class="cite" href="#bron-7" title="Bron 7">[7]</a><a class="cite" href="#bron-9" title="Bron 9">[9]</a></p></div>
-    </div><details class="deep"><summary>Drie ethische vragen</summary><div class="deep-body"><div class="ethics">
+    </div><details class="deep deep-wide"><summary>Drie ethische vragen</summary><div class="deep-body"><div class="ethics">
       <div class="eth"><h4>Gelijke toegang</h4><p class="eth-q"><strong>Kan iedereen deze behandeling krijgen, of vooral mensen met geld?</strong></p><p>In Oregon worden sessies niet vergoed en kosten ze vaak ruim 1.000 dollar.</p></div>
       <div class="eth"><h4>Kwaliteit van zorg</h4><p class="eth-q"><strong>Wie let op de veiligheid als dit buiten de gewone zorg gebeurt?</strong></p><p>De Staatscommissie MDMA (een commissie die de Nederlandse regering adviseerde over MDMA en psychedelica) wees op therapeuten die buiten de reguliere zorg met psychedelica werken.</p></div>
       <div class="eth"><h4>Prijs en winst</h4><p class="eth-q"><strong>Is de prijs gebaseerd op de kosten of op de winst?</strong></p><p>Compass, het bedrijf dat psilocybine als medicijn ontwikkelt, spreekt zelf van een verwachte “blockbuster” (een medicijn dat enorm veel oplevert), met een prijs die niet op de productiekosten van de stof is gebaseerd (zie hoofdstuk 3).<a class="cite" href="#bron-11" title="Bron 11">[11]</a></p></div>
