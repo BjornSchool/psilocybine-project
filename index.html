@@ -944,7 +944,34 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
 .vp-wrap .deeps-row .deeps{ margin:0; max-width:none; }
 .vp-wrap .deeps-row > figure.photo{ margin:0; width:300px; max-width:300px; float:none; position:sticky; top:72px; }
 @media (max-width:980px){ .vp-wrap .ch-in > .deeps-row{ grid-template-columns:minmax(0,1fr); row-gap:22px; } .vp-wrap .deeps-row > figure.photo{ position:static; width:auto; max-width:300px; } }
-.vp-wrap .gloss{ margin:0; } .vp-wrap .gloss dt{ font-weight:600; color:var(--fg); margin-top:12px; } .vp-wrap .gloss dt:first-child{ margin-top:0; } .vp-wrap .gloss dd{ margin:2px 0 0; color:var(--soft); }</style>
+.vp-wrap .gloss{ margin:0; } .vp-wrap .gloss dt{ font-weight:600; color:var(--fg); margin-top:12px; } .vp-wrap .gloss dt:first-child{ margin-top:0; } .vp-wrap .gloss dd{ margin:2px 0 0; color:var(--soft); }
+/* ---------- telefoon: grotere tikdoelen en leesbare kleine tekst ---------- */
+@media (max-width:700px){
+  .vp-wrap .chnav button{ padding:10px 13px; font-size:.76rem; }
+  .vp-wrap .chnav{ padding-top:5px; padding-bottom:5px; }
+  .vp-wrap a.cite{ position:relative; font-size:11.5px; }
+  .vp-wrap a.cite::after{ content:""; position:absolute; inset:-9px -5px; }
+  .vp-wrap .chip,.vp-wrap .btn{ min-height:42px; padding:9px 15px; }
+  .vp-wrap .stype,.vp-wrap .ch-tag,.vp-wrap .photo .cr,.vp-wrap .rst,.vp-wrap .pill,.vp-wrap .tl-year,.vp-wrap table.data th,.vp-wrap .tagline,.vp-wrap .tag,.vp-wrap small,.vp-wrap .q-count,.vp-wrap .stage-tag{ font-size:max(.74rem,11.8px); }
+  .vp-wrap figcaption{ font-size:.82rem; }
+  .vp-wrap .brand{ padding:10px 0; }
+}
+@media (max-width:700px){
+  .vp-wrap .ch-in > figure.photo,.vp-wrap .ch-in > figure.photo.narrow,.vp-wrap .ch-in > figure.photo.flyer,.vp-wrap .deeps-row > figure.photo{ width:auto; max-width:min(300px,100%); }
+  .vp-wrap .ch-in > figure.photo.side:not(.narrow){ max-width:min(420px,100%); }
+  .vp-wrap .rung{ grid-template-columns:56px minmax(0,1fr); }
+  .vp-wrap .rung .rt{ min-width:0; }
+  .vp-wrap .rung .rt b,.vp-wrap .rung .rt i{ overflow-wrap:anywhere; }
+  .vp-wrap .rst{ display:inline-block; white-space:normal; margin-left:0; margin-top:4px; }
+  .vp-wrap a.cite{ font-size:11.5px !important; }
+  .vp-wrap p.tag,.vp-wrap .tagline{ font-size:max(.74rem,11.5px); }
+}
+@media (max-width:700px){
+  .vp-wrap .home-sec .photo.side.narrow,.vp-wrap .home-sec .side{ width:auto !important; max-width:min(300px,100%) !important; }
+  .vp-wrap .pcard2 dt,.vp-wrap .pcard2 .tag{ font-size:max(.74rem,11.5px) !important; }
+}
+@media (max-width:700px){ .vp-wrap p.you > b,.vp-wrap span.tagline{ font-size:11.5px !important; } }
+</style>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2716%27 fill=%27%237E5319%27/%3E%3Cpath d=%27M6 17c0-6 4.500-10 10-10s10 4 10 10z%27 fill=%27%23F4D9A8%27/%3E%3Crect x=%2714%27 y=%2717%27 width=%274%27 height=%279%27 rx=%272%27 fill=%27%23F4D9A8%27/%3E%3C/svg%3E"></head>
 <body>
 <header><nav class="wrap"><a class="brand" href="#" onclick="var v=document.getElementById('vp');if(v){v.scrollTo({top:0});}return false;">Psilocybine — het traject</a></nav></header>
