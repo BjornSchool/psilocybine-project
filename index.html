@@ -934,7 +934,11 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
 
 @media (max-width:700px){ .vp-wrap .twin:not(:has(.art)){ grid-template-columns:1fr; } }
 
-.tl-src:empty{display:none}</style>
+.tl-src:empty{display:none}
+/* ---------- footer: vanaf Bijlage dezelfde kleur als de header ---------- */
+#c-bronnen,#c-end{ background:#EEE8DA; box-shadow:0 0 0 100vmax #EEE8DA; clip-path:inset(0 -100vmax); }
+#c-bronnen::before{ content:''; position:absolute; top:0; left:-100vmax; right:-100vmax; height:1px; background:rgba(42,38,33,.22); }
+</style>
 </head>
 <body>
 <header><nav class="wrap"><a class="brand" href="#" onclick="var v=document.getElementById('vp');if(v){v.scrollTo({top:0});}return false;">Psilocybine — het traject</a></nav></header>
@@ -1585,8 +1589,8 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
    'c-5':['#D2E1DA','#9FC7C0','#C9D7B5','#1F5A4F',0.08,1.50,0],
    'c-6':['#EFEADB','#D8DFB8','#F3E1B8','#4F5D35',0.06,1.70,0],
    'c-onderzoek':['#E9E3D3','#CFD8C4','#EADDBF','#5B5527',0.08,1.55,0],
-   'c-bronnen':['#EEE9DD','#E0DACB','#D9D6C8','#5A5448',0.06,1.70,0],
-   'c-end':['#EEE9DD','#E0DACB','#D9D6C8','#5A5448',0.06,1.70,0]
+   'c-bronnen':['#EEE8DA','#EEE8DA','#EEE8DA','#5A5448',0,1.70,0],
+   'c-end':['#EEE8DA','#EEE8DA','#EEE8DA','#5A5448',0,1.70,0]
   };
   var P={}; Object.keys(RAW).forEach(function(k){ var r=RAW[k]; P[k]={bg:hex(r[0]),b1:hex(r[1]),b2:hex(r[2]),ac:hex(r[3]),gr:r[4],bt:r[5],te:r[6]}; });
   function m(a,b,t){ return a+(b-a)*t; }
