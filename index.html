@@ -517,9 +517,9 @@
 @media (max-width:700px){ .vp-wrap .photos2{ grid-template-columns:1fr; } }
 .vp-wrap .photo.flyer{ max-width:380px; }
 /* ---------- ONDERZOEK 1: aparte, duidelijke kop ---------- */
-.vp-wrap #expert{ border-top:5px solid var(--accent); margin-top:46px; padding-top:24px; }
-.vp-wrap #expert .wrap > p.okick{ font-family:'IBM Plex Mono',monospace; font-size:.8rem; letter-spacing:.04em; text-transform:uppercase; color:var(--accent); margin:0 0 6px; max-width:none; }
-.vp-wrap #expert h2{ font-family:'Fraunces',serif; font-weight:500; font-size:clamp(1.8rem,4.2vw,2.5rem); line-height:1.1; letter-spacing:-.01em; margin:0 0 14px; }
+.vp-wrap #expert, .vp-wrap #interview{ border-top:5px solid var(--accent); margin-top:46px; padding-top:24px; }
+.vp-wrap #expert .wrap > p.okick, .vp-wrap #interview .wrap > p.okick{ font-family:'IBM Plex Mono',monospace; font-size:.8rem; letter-spacing:.04em; text-transform:uppercase; color:var(--accent); margin:0 0 6px; max-width:none; }
+.vp-wrap #expert h2, .vp-wrap #interview h2{ font-family:'Fraunces',serif; font-weight:500; font-size:clamp(1.8rem,4.2vw,2.5rem); line-height:1.1; letter-spacing:-.01em; margin:0 0 14px; }
 /* ---------- TRUFFELPARADOX: kaartjes met tekening ernaast ---------- */
 .vp-wrap #truffle .tpgrid{ display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:22px; align-items:start; }
 .vp-wrap #truffle .tpcards .pair{ grid-template-columns:1fr; }
@@ -1336,6 +1336,7 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
     </div>
 </section><section class="home-sec" id="interview">
   <div class="wrap">
+    <p class="okick">Onderzoek 2 · interview in een smartshop</p>
     <h2>Interview in de smartshop</h2>
     <div class="ivlayout">
       <div class="ivtext">
