@@ -1545,27 +1545,27 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
         <div class="fact"><b>70–150×</b><span>minder werkzame stof per patiënt per jaar dan dagelijks escitalopram (eigen berekening)</span></div>
         <div class="fact"><b>17%</b><span>van de uitgangsstoffen eindigt als psilocybine in de tweede productieroute van Usona, tegenover 5% in de eerste (het ‘rendement’)<a class="cite" href="#bron-114" title="Bron 114">[114]</a></span></div>
       </div><div class="summary"><b>In het kort</b><p>Wat psilocybine met het milieu doet, zie je in drie stappen. Bij de productie is de huidige scheikundige methode het minst duurzaam, maar er is maar weinig stof nodig. Productie met gist of bacteriën en winning uit paddenstoelen zijn veelbelovend, maar nog niet op grote schaal mogelijk. Bij het gebruik verlaat maar een klein deel het lichaam als actieve stof via de urine. Een voorbeeldberekening volgens de Europese regels laat zien dat de verwachte hoeveelheid in oppervlaktewater onder de grens blijft als het middel bij een kleine groep wordt gebruikt, maar die grens kan bereiken als het voor veel mensen wordt voorgeschreven. Wat er daarna in het milieu gebeurt en wat dat met waterdieren doet, is nog nauwelijks onderzocht. Bij antidepressiva zie je al dat lage concentraties het gedrag van vissen kunnen veranderen. Tot slot zijn de belasting van de intensieve begeleiding (veel zorgtijd) en de tradities van de Mazateken, de gemeenschap waar de paddenstoelen oorspronkelijk vandaan komen, onderdelen van het milieuverhaal die vaak vergeten worden.</p></div><div class="viz" id="calc">
-  <h4 class="viz-title">Reken zelf mee: komt psilocine boven de EMA-actiegrens in oppervlaktewater?</h4>
-  <p class="viz-sub">De EMA rekent vooraf uit hoeveel van een medicijn in het oppervlaktewater kan komen (stap ‘fase I’ van de milieubeoordeling). Blijft dat onder 0,01 µg/L, dan hoeft er niet meer onderzocht te worden. Hieronder zie je zo’n voorbeeldberekening. Kies een scenario of verstel de schuifjes.</p>
+  <h4 class="viz-title">Reken zelf mee: komt er te veel psilocine in het oppervlaktewater?</h4>
+  <p class="viz-sub">Voordat een medicijn op de markt komt, rekent de EMA (de Europese medicijnautoriteit) uit hoeveel ervan in rivieren en meren kan komen. Blijft dat onder 0,01 microgram per liter, dan is verder onderzoek niet nodig. Kies een scenario of verschuif de schuifjes.</p>
   <div class="calc-presets" role="group" aria-label="Scenario's">
-    <button type="button" class="chip" data-preset="A">A · EMA-standaard: 1% dagelijks</button>
-    <button type="button" class="chip" data-preset="B">B · TRD, 2 doses/jaar</button>
-    <button type="button" class="chip" data-preset="C">C · TRD, 4 doses/jaar</button>
-    <button type="button" class="chip" data-preset="D">D · brede depressie, 2 doses/jaar</button>
-    <button type="button" class="chip" data-preset="E">E · brede depressie, 4 doses/jaar</button>
+    <button type="button" class="chip" data-preset="A">A · EMA-standaard (1% gebruikt dagelijks)</button>
+    <button type="button" class="chip" data-preset="B">B · Therapieresistente depressie, 2 doses per jaar</button>
+    <button type="button" class="chip" data-preset="C">C · Therapieresistente depressie, 4 doses per jaar</button>
+    <button type="button" class="chip" data-preset="D">D · Alle depressie, 2 doses per jaar</button>
+    <button type="button" class="chip" data-preset="E">E · Alle depressie, 4 doses per jaar</button>
   </div>
   <div class="calc-grid">
     <div class="calc-controls">
-      <label class="calc-row" for="c-dose"><span>Dosis per toedieningsdag <output id="o-dose"></output></span>
+      <label class="calc-row" for="c-dose"><span>Dosis per keer <output id="o-dose"></output></span>
         <input id="c-dose" type="range" min="5" max="35" step="5" value="25"></label>
-      <label class="calc-row" for="c-prev"><span>Prevalentie van de indicatie <output id="o-prev"></output></span>
+      <label class="calc-row" for="c-prev"><span>Deel van de bevolking met deze aandoening <output id="o-prev"></output></span>
         <input id="c-prev" type="range" min="0.5" max="15" step="0.1" value="2.8"></label>
       <label class="calc-row" for="c-n"><span>Doses per patiënt per jaar <output id="o-n"></output></span>
         <input id="c-n" type="range" min="1" max="12" step="1" value="2"></label>
-      <label class="calc-check" for="c-std"><input id="c-std" type="checkbox"> Gebruik de EMA-standaardaanname (1% van de bevolking, dagelijks)</label>
+      <label class="calc-check" for="c-std"><input id="c-std" type="checkbox"> Rekenen met de EMA-standaard (1% van de bevolking, dagelijks)</label>
     </div>
     <div class="calc-out" aria-live="polite">
-      <div class="calc-num"><b id="r-pec">–</b><span>µg/L verwachte concentratie (PEC<sub>SW</sub>)</span></div>
+      <div class="calc-num"><b id="r-pec">–</b><span>µg/L verwachte concentratie in het water</span></div>
       <div class="gauge" id="gauge" role="img" aria-label="">
         <div class="gauge-track"><div class="gauge-fill" id="g-fill"></div><div class="gauge-limit" id="g-limit"><span>grens 0,01</span></div></div>
         <div class="gauge-ticks"><span id="t1">0,001</span><span id="t2">0,01</span><span id="t3">0,1</span><span id="t4">1 µg/L</span></div>
@@ -1574,8 +1574,8 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
       <p class="calc-detail" id="r-detail"></p>
     </div>
   </div>
-  <p class="viz-foot">In gewone woorden: de dosis, maal het deel van de bevolking dat het gebruikt (FPEN), gedeeld door het afvalwater per persoon en de verdunning in het oppervlaktewater. <strong>Formule:</strong> PEC<sub>SW</sub> = (dosis × FPEN) / (200 L afvalwater per inwoner per dag × verdunning 10). FPEN is bij EMA-standaard 0,01; verfijnd is het prevalentie × behandelduur (1 dag) × behandelingen per jaar / 365. De berekening neemt aan dat niets wordt afgebroken, terwijl in werkelijkheid slechts ongeveer 1,5% als onveranderd psilocine in de urine komt. Tegelijk kunnen glucuroniden in het riool weer worden teruggesplitst. Dit is geen officiële beoordeling.</p>
-  <p class="viz-foot">Bronnen: EMA-richtlijn milieurisicobeoordeling; prevalentie 8,5%; TRD als ongeveer een derde daarvan; 2–4 doses per jaar.</p>
+  <p class="viz-foot"><strong>Zo rekenen we:</strong> dosis × deel van de bevolking dat het gebruikt, gedeeld door het afvalwater per persoon (200 liter per dag) en de verdunning in het water (10 keer). We rekenen alsof niets wordt afgebroken, terwijl in werkelijkheid maar ongeveer 1,5% onveranderd in de urine komt. Het is een eigen rekenvoorbeeld, geen officiële beoordeling.</p>
+  <p class="viz-foot">Bronnen: EMA-richtlijn milieurisicobeoordeling; 8,5% van de bevolking heeft depressie, ongeveer een derde daarvan is therapieresistent.</p>
 </div><div class="viz" id="amount">
   <h4 class="viz-title">Psilocybine of een dagelijks antidepressivum: hoeveel werkzame stof neemt een patiënt per jaar in?</h4>
   <p class="viz-sub">Hoe meer werkzame stof iemand inneemt, hoe meer er via de urine in het riool kan komen. Escitalopram is een veelgebruikt antidepressivum dat je elke dag slikt. Psilocybine krijg je maar een paar keer per jaar. Dit is een grove vergelijking van hoeveelheden, geen berekening van de totale milieubelasting.</p>
@@ -2157,8 +2157,8 @@ body .vp-wrap{ height:calc(100vh - 45px); height:calc(100dvh - 45px); min-height
       gFill.style.width = (pos(pec)*100) + '%';
       var over = pec >= LIM;
       gFill.classList.toggle('over', over);
-      rVerdict.textContent = over ? 'Boven de actiegrens van 0,01 µg/L: een uitgebreidere fase II is nodig.' : 'Onder de actiegrens van 0,01 µg/L: fase I volstaat.';
-      rDetail.textContent = 'FPEN = ' + fpen.toLocaleString('nl-NL', { maximumSignificantDigits: 3 }) + (std.checked ? ' (EMA-standaardaanname)' : '') + '. Factor ' + fmt(pec/LIM, 2) + ' ten opzichte van de grens.';
+      rVerdict.textContent = over ? 'Boven de grens van 0,01 µg/L: de EMA vraagt dan extra onderzoek.' : 'Onder de grens van 0,01 µg/L: extra onderzoek is niet nodig.';
+      rDetail.textContent = fmt(pec/LIM, 2) + ' keer de grens.';
       gauge.setAttribute('aria-label', 'Verwachte concentratie ' + fmt(pec,3) + ' microgram per liter, ' + (over ? 'boven' : 'onder') + ' de grens van 0,01');
       var key = null;
       Object.keys(PRESETS).forEach(function(k){
